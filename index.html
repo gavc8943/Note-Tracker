@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Tracker App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h1 class="header">Note Tracker</h1>
+        <h2 class="sub-head">Add a new note</h2>
+      </div>
+      <div>
+        <input
+          class="text"
+          type="text"
+          placeholder="Write your note here"
+          name="note-input"
+        />
+      </div>
+      <div>
+        <button class="button-add">Add Note</button>
+      </div>
+      <div>
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th class="note-header">Note</th>
+              <th class="actions-header">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="note-content">Example Note</td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <!--More rows can go here-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
