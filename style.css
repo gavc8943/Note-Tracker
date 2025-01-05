@@ -45,6 +45,13 @@ body {
   border: 1px solid #ddd;
   font-size: 1rem;
   margin: 10px 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.text:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
 }
 
 /* Button */
@@ -57,9 +64,15 @@ body {
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .button-add:hover {
   background-color: #45a049;
 }
+
+.button-add:active {
+  transform: scale(0.98);
+}
+
+/* Table */

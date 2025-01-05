@@ -13,7 +13,9 @@
         <h2 class="sub-head">Add a new note</h2>
       </div>
       <div>
+        <label for="note-input">Write your note here</label>
         <input
+          id="note-input"
           class="text"
           type="text"
           placeholder="Write your note here"
@@ -36,6 +38,17 @@
           </tbody>
         </table>
       </div>
+      <!--Modal Structure-->
+      <div class="modal">
+        <div class="modal-header">More Details</div>
+        <div class="modal-content">
+          <!--Content added dynamically-->
+        </div>
+        <button class="modal-close">Close</button>
+      </div>
+
+      <!--Overlay-->
+      <div class="overlay"></div>
     </div>
 
     <script src="script.js"></script>
