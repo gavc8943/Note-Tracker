@@ -13,7 +13,9 @@
         <h2 class="sub-head">Add a new note</h2>
       </div>
       <div>
-        <label for="note-input">Write your note here</label>
+        <label for="note-input" class="visually-hidden"
+          >Write your note here</label
+        >
         <input
           id="note-input"
           class="text"
@@ -34,21 +36,23 @@
             </tr>
           </thead>
           <tbody>
-            <!--More rows can go here-->
+            <tr>
+              <td colspan="2">No notes added yet. Start by adding a note.</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <!--Modal Structure-->
-      <div class="modal">
+      <div class="modal" aria-hidden="true">
         <div class="modal-header">More Details</div>
         <div class="modal-content">
           <!--Content added dynamically-->
         </div>
-        <button class="modal-close">Close</button>
+        <button class="modal-close">X</button>
       </div>
 
       <!--Overlay-->
-      <div class="overlay"></div>
+      <div class="overlay" aria-hidden="true"></div>
     </div>
 
     <script src="script.js"></script>

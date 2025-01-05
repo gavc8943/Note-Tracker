@@ -9,14 +9,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  max-width: 800px;
   font-family: Arial, sans-serif;
   background-color: lightblue;
 }
 
 .container {
-  max-width: 800px;
-  width: 90%;
+  max-width: 100%;
+  width: 60%;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -48,10 +47,28 @@ body {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+/* Focus effect */
+
 .text:focus {
   border-color: #4caf50;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
   outline: none;
+}
+
+/* Hover effect */
+.text:hover {
+  border-color: #80e27e;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Button */
@@ -72,7 +89,116 @@ body {
 }
 
 .button-add:active {
-  transform: scale(0.98);
+  transform: scale(0.95);
 }
 
 /* Table */
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.notes-table th,
+.notes-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.notes-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.notes-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.notes-table tr:nth-child(0dd) {
+  background-color: #fff;
+}
+
+/* Hover effect for rows */
+.notes-table tr:hover {
+  background-color: e0f7fa;
+}
+
+/* Button in table */
+.notes-table td button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover effect */
+.notes-table td button:hover {
+  background-color: #45a049;
+}
+
+/* Button Active effect */
+.notes-table td button:active {
+  transform: scale(0.98);
+}
+
+/* Modal Structure */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  z-index: 1001;
+}
+
+/* Modal Header */
+.modal-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Modal Content */
+.modal-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.modal-close {
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Close button hover effect */
+.modal-close:hover {
+  background-color: #e53e34;
+}
+
+/* Modal overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
